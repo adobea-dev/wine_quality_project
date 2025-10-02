@@ -14,14 +14,13 @@ logger = logging.getLogger(__name__)
 
 # Expected schema for Wine Quality dataset
 EXPECTED_COLUMNS = [
-    'type', 'fixed acidity', 'volatile acidity', 'citric acid',
+    'fixed acidity', 'volatile acidity', 'citric acid',
     'residual sugar', 'chlorides', 'free sulfur dioxide',
     'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality'
 ] 
 
 # Data types for validation
 EXPECTED_DTYPES = {
-    'type': 'object',
     'fixed acidity': 'float64',
     'volatile acidity': 'float64',
     'citric acid': 'float64',
