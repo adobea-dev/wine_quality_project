@@ -1,4 +1,4 @@
-🧠 Wine Quality Prediction – End-to-End ML System
+## 🧠 Wine Quality Prediction – End-to-End ML System
 
 A fully modular machine learning pipeline for multiclass wine quality classification (Low, Medium, High).
 This project demonstrates a production-ready ML workflow — from data ingestion and feature engineering to model evaluation, persistence, and REST API deployment.
