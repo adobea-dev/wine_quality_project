@@ -20,35 +20,36 @@ Config-driven runs: adjustable preprocessing, sampling, and model parameters
 📁 Project Structure
 
 wine_quality_project/
-
-├── bin/
-│   └── run_pipeline.sh                # One-command reproducible run
-├── configs/
-│   └── default.yaml                   # Main config for pipeline
-├── data/
-│   ├── raw/                           # Original dataset
-│   └── processed/                     # Cleaned and labeled data
-├── models/
-│   ├── champion.joblib                # Best performing model
-│   ├── champion_metadata.json         # Model metadata
-│   └── scaler.pkl                     # Scaler used in preprocessing
-├── reports/
-│   ├── runs/                          # Logged runs (metrics, configs, plots)
-│   ├── metrics/                       # Evaluation metrics JSONs
-│   ├── figures/                       # Confusion matrices, ROC curves, etc.
-│   └── runtime/                       # Environment snapshot
-├── src/
-│   ├── api/                           # FastAPI app for deployment
-│   ├── pipeline/                      # Orchestration (main.py)
-│   ├── data_management/               # Downloading, cleaning, validation
-│   ├── features/                      # Feature engineering & scaling
-│   ├── models/                        # Training, evaluation, comparison
-│   ├── utils/                         # I/O, runtime info, tracking
-│   └── visualization/                 # EDA plots
-├── requirements.txt
-├── requirements.lock.txt
-├── .gitignore
-└── README.md
+├── 📁 src/                          # Source code
+│   ├── 📁 data_management/          # Data handling modules
+│   │   ├── downloader.py            # Data download with fallback
+│   │   ├── loader.py                # Data loading and validation
+│   │   └── processor.py             # Data cleaning and preprocessing
+│   ├── 📁 features/                 # Feature engineering
+│   │   ├── engineering.py           # Feature creation
+│   │   ├── selection.py             # Feature selection methods
+│   │   └── transformation.py        # Data scaling and normalization
+│   ├── 📁 models/                   # ML model components
+│   │   ├── trainer.py               # Model training
+│   │   ├── evaluator.py             # Model evaluation
+│   │   └── comparator.py            # Model comparison
+│   ├── 📁 visualization/            # Plotting and visualization
+│   │   ├── eda_plot.py              # Exploratory data analysis plots
+│   │   └── model_plots.py           # Model performance plots
+│   └── 📁 pipeline/                 # Main pipeline orchestration
+│       └── main.py                  # Complete ML pipeline
+├── 📁 data/                         # Data storage
+│   ├── raw/                         # Raw datasets
+│   └── processed/                   # Processed datasets
+├── 📁 models/                       # Trained model files
+├── 📁 reports/                      # Generated reports and plots
+├── 📁 tests/                        # Unit tests
+├── 📁 notebooks/                    # Jupyter notebooks (optional)
+├── app.py                           # Flask web application
+├── requirements.txt                 # Python dependencies
+├── pyproject.toml                   # Project configuration
+├── docker-compose.yml               # Docker configuration
+└── README.md                        # This file
 
 
 🧩 Workflow Overview
