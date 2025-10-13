@@ -18,7 +18,9 @@ FastAPI deployment exposing a /predict endpoint
 Config-driven runs: adjustable preprocessing, sampling, and model parameters
 
 📁 Project Structure
+
 wine_quality_project/
+
 ├── bin/
 │   └── run_pipeline.sh                # One-command reproducible run
 ├── configs/
